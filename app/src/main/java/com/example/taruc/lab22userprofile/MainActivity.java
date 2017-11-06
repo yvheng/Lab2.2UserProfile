@@ -3,6 +3,7 @@ package com.example.taruc.lab22userprofile;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -37,5 +38,23 @@ public class MainActivity extends AppCompatActivity {
             textViewID.setText(getString(R.string.userid)+" "+userID);
             textViewEmail.setText(getString(R.string.email)+" "+email);
         }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("MainActivity","onPause");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("MainActivity","onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("MainActivity","onResume");
     }
 }
